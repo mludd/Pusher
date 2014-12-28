@@ -79,46 +79,6 @@ class Game:
         basePath = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..'))
 
         keys = pygame.key.get_pressed()
-        #for idx, val in enumerate(keys):
-        #print(keys)
-        #self.map.players.read_input(keys)
-        #for kmIdx, keymap in enumerate(self.map.keymaps):
-        #    print(kmIdx)
-        #        #print(pygame.key.name(pygame.))
-        #    for idx, val in enumerate(keys):
-        #        if val:
-        #            for action in self.map.keymaps[keymap].actions:
-        #                if self.map.keymaps[keymap].actions[action] == pygame.key.name(idx):
-        #                    print(pygame.key.name(idx))
-        #                    if action == 'accelerate':
-        #                        self.map.players[kmIdx].accelerate(self.clock)
-        #                    if action == 'slow':
-        #                        self.map.players[kmIdx].slow(self.clock)
-        #                    if action == 'left':
-        #                        self.map.players[kmIdx].left(self.clock)
-        #                    if action == 'right':
-        #                        self.map.players[kmIdx].right(self.clock)
-                        #pass
-                    #print(idx)
-                    #print(pygame.key.name(idx))
-
-
-        
-        if not keys[pygame.K_s]:
-            #self.map.player.slow(self.clock)
-            pass
-        if keys[pygame.K_w]:
-            #self.map.player.accelerate(self.clock)
-            pass
-        if keys[pygame.K_s]:
-            #self.map.player.reverse(self.clock)
-            pass
-        if keys[pygame.K_a]:
-            #self.map.player.left(self.clock)
-            pass
-        if keys[pygame.K_d]:
-            #self.map.player.right(self.clock)
-            pass
         
         for event in pygame.event.get():
             if event.type == QUIT:

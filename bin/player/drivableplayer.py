@@ -71,7 +71,6 @@ class DrivablePlayer(player.Player):
 	def handle_collision(self, item, clock):
 		td = clock.get_time()
 		colliding = pygame.sprite.collide_mask(item, self)
-		#print colliding
 		if colliding and item.type == 'dynamic_prop':
 			print colliding
 
@@ -81,7 +80,6 @@ class DrivablePlayer(player.Player):
 			]
 
 			item.speed = self.speed * 1
-			#item.rotation = self.rotation
 			item.direction = self.direction
 
 

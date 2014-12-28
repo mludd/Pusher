@@ -105,10 +105,6 @@ class Map:
     def draw_blocks(self, screen, surface, clock):
         ''' Draws all map blocks '''
         for block in self.blocks:
-            #block.sprite.clear(screen, surface)
-            #surface.blit(surface, block.rect, block.rect)
-            #surface = block.sprite.update(surface, clock)
-            #block.sprite.draw(surface)
             block.sprite.update(surface, clock)
             surface.blit(surface, block.rect, block.rect)
             block.sprite.draw(surface)
