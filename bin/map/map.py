@@ -18,13 +18,6 @@ class Map:
             self.blocks = []
 
     def load(self, filename):
-        '''
-        Basic anatomy of a map file:
-            - Map name
-            - Map size
-            - Tile matrix
-            - Block list
-        '''
         with open(filename) as file:
             jsonData = file.read()
             data = json.loads(jsonData)
@@ -62,19 +55,18 @@ class Map:
             currentRow += 1
 
         # Load blocks
-        #self.blocks = list()
         self.blocks = pygame.sprite.Group()
         blocks = data['blocks']
         for blk in blocks:
-            #self.blocks.append(block.Block(blk['type'], blk['position']))
             self.blocks.add(block.Block(blk['type'], blk['position'], blk['rotation'], blk['direction'], blk['speed']))
 
+        # Load players
         self.players = pygame.sprite.Group()
         for plr in data['players']:
             self.players.add(player.DrivablePlayer(plr['position'], plr['rotation'], plr['direction'], plr['speed'], plr['keymap']))
 
     def load_layered(self, data):
-        ''' Loads a layered map'''
+        ''' Loads a layered map (stub) '''
         pass
 
     def draw(self, screen, surface, clock):

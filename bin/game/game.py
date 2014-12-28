@@ -66,16 +66,18 @@ class Game:
         return 0
 
     def render_debug(self, font, surface):
+        ''' Renders the debug data at the top of the screen '''
         i = 0
         for plr in self.map.players:
             debugText = font.render("Player position: ["+('%.2f' %plr.position[0])+" "+('%.2f' % plr.position[1])+"], Player speed: "+('%.2f' % plr.speed)+", Player rotation: "+('%.2f' % plr.rotation), 1, (0,0,0), (255,255,255,255))
             textPosition = debugText.get_rect()
             textPosition.centerx = surface.get_rect().centerx
+            textPosition.move_ip(0,i)
             self.screen.blit(debugText, textPosition)
             i += 12
 
     def read_input(self):
-        ''' Checks input '''
+        ''' Checks global hardcoded user input '''
         basePath = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..'))
 
         keys = pygame.key.get_pressed()
