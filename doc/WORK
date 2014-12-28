@@ -1,0 +1,21 @@
+(obj) Game
+	(obj) Screen()
+
+	(obj) Marker (inherits from Block)
+		(property) position
+		(function) move(direction)
+
+	(obj) Map
+		(collection ) Tiles
+		(function) checkTile(x,y)
+
+	(collection) Blocks
+		(obj) Block (inherits from Sprite)
+			(property) position
+			(function) move(direction)
+		(obj) Player (inherits from Block)
+			(property) position
+			(function) move(direction)
+
+	(function) redraw()
+	(function) handleInput()
