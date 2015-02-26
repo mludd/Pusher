@@ -1,0 +1,304 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sort",
+				"sortedWords"
+			],
+			[
+				"_",
+				"_get_most_common_words_in_database"
+			],
+			[
+				"find",
+				"find_similar_documents"
+			],
+			[
+				"sorte",
+				"sortedScores"
+			],
+			[
+				"docu",
+				"documentScores"
+			],
+			[
+				"db",
+				"dbFilename"
+			],
+			[
+				"fre",
+				"frequencies"
+			],
+			[
+				"fingerpri",
+				"fingerprint_document"
+			],
+			[
+				"sor",
+				"sortedFrequencies"
+			],
+			[
+				"freq",
+				"frequencies"
+			],
+			[
+				"press",
+				"pressedKey"
+			],
+			[
+				"rende",
+				"render_debug"
+			],
+			[
+				"colli",
+				"collide_mask"
+			],
+			[
+				"rotate",
+				"rotate_center"
+			],
+			[
+				"rota",
+				"rotatedImage"
+			],
+			[
+				"rot",
+				"rotatedRect"
+			],
+			[
+				"tile",
+				"tileSize"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/mikael/src/Pusher"
+	],
+	"file_history":
+	[
+		"/Users/mikael/src/Pusher/tools/mapeditor.py",
+		"/Users/mikael/src/Pusher/bin/pusher.py",
+		"/Users/mikael/src/markov/categorizer.py",
+		"/Users/mikael/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/mikael/src/markov/markov.py",
+		"/Users/mikael/Documents/118100/Merinfo/Arkiv/spa2.0/codebehind/category.aspx.cs",
+		"/Users/mikael/Documents/118100/Merinfo/Arkiv/spa2.0/App_Code/XLinkDataSet.cs",
+		"/Users/mikael/Documents/118100/Merinfo/Arkiv/spa2.0/App_Code/XLinkAddress.cs",
+		"/Users/mikael/Documents/118100/Merinfo/Arkiv/spa2.0/codebehind/category2.aspx.cs",
+		"/Users/mikael/Documents/118100/Merinfo/Arkiv/spa2.0/App_Code/XLink.cs",
+		"/Users/mikael/Documents/118100/Merinfo/Arkiv/spa2.0/codebehind/SPA.master.cs",
+		"/Users/mikael/Documents/118100/Merinfo/Arkiv/spa2.0/codebehind/webquery.aspx.cs",
+		"/Users/mikael/Documents/118100/Merinfo/Arkiv/spa2.0/codebehind/question.aspx.cs",
+		"/Users/mikael/src/Pusher/bin/keymap/keymap.py",
+		"/Users/mikael/src/Pusher/keymaps/player2.js",
+		"/Users/mikael/src/Pusher/keymaps/player1.js",
+		"/Users/mikael/src/Pusher/bin/keymap/__init__.py",
+		"/Users/mikael/src/Pusher/blocks/box.js",
+		"/Users/mikael/src/Pusher/blocks/player.js",
+		"/Users/mikael/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/mikael/src/Pusher/bin/player/player.py",
+		"/Users/mikael/src/Pusher/maps/default.js",
+		"/Users/mikael/src/Pusher/bin/block/block.py",
+		"/Users/mikael/src/Pusher/bin/tile/tile.py",
+		"/Users/mikael/src/Pusher/blocks/unmovable_box.js",
+		"/Users/mikael/src/Pusher/bin/layer/layer.py",
+		"/Users/mikael/src/Pusher/bin/settings/settings.py",
+		"/Users/mikael/src/Pusher/maps/dirtroad.js",
+		"/Users/mikael/src/Pusher/bin/map/map.py",
+		"/Users/mikael/src/Pusher/tiles/grass.js",
+		"/Users/mikael/src/Pusher/tiles/road_horiz.js",
+		"/Users/mikael/src/Pusher/tiles/road_corner_bottom_left.js",
+		"/Users/mikael/src/Pusher/tiles/road_corner_bottom_right.js",
+		"/Users/mikael/src/Pusher/tiles/road_vert.js",
+		"/Users/mikael/src/Pusher/tiles/road_corner_top_right.js",
+		"/Users/mikael/src/Pusher/tiles/road_corner_top_left.js",
+		"/Users/mikael/src/Pusher/tiles/concrete.js",
+		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
+		"/Users/mikael/Documents/Utveckling/restyle.pantburk.info/include/Pantburk.inc.php",
+		"/Users/mikael/Documents/Utveckling/restyle.pantburk.info/index.php",
+		"/Users/mikael/Documents/Utveckling/restyle.pantburk.info/images/themeMono/style.css",
+		"/Users/mikael/Documents/Utveckling/Askmen Demographic Survey/amd_copy.csv",
+		"/Users/mikael/Documents/Utveckling/Reponsive test/index.html"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"most_common",
+			"false",
+			"db",
+			"dict",
+			"print",
+			"dumpdb",
+			"markov",
+			"\\s+",
+			"\\n",
+			"xlink",
+			"print",
+			"keymap",
+			"scroll",
+			"rotation",
+			"slow",
+			"mask",
+			"self.mask",
+			"self.type",
+			"dynamic_prop",
+			"update",
+			"print",
+			"rotation",
+			"        '''",
+			"print",
+			"rect",
+			"self.rect",
+			"update",
+			"area",
+			"Block",
+			"block",
+			"background",
+			"åÊ"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			" ",
+			"#"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "Pusher.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

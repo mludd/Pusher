@@ -28,7 +28,6 @@ class Game:
 
         self.screen.blit(self.surface, (0,0))
         pygame.display.flip()
-        print("running")
         self.map = map.Map(basePath+'/maps/default.js') # map.Map('/Users/mikael/src/Pusher/maps/default.js')
         camera = pygame.rect.Rect(0, 0, self.settings.resolution[0], self.settings.resolution[1])
 
