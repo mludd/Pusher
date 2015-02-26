@@ -17,6 +17,8 @@ class DrivablePlayer(player.Player):
 		self.speed = speed
 		self.keymap = keymap.Keymap(keyboard)
 		self.type = "player"
+		self.totalTimer = 0
+		self.lastShot = False
 
 	def check_move(self):
 		return True
@@ -62,8 +64,13 @@ class DrivablePlayer(player.Player):
 		else:
 			self.speed = 0
 
-	def shoot(self, origin):
-		return bullet.Bullet(origin, self.rotation, 0.4)
+	def shoot(self, clock, origin):
+		td = clock.get_time()
+		print self.totalTimer - self.lastShot
+		
+		if self.totalTimer - self.lastShot > 500:
+			self.lastShot = self.totalTimer
+			return bullet.Bullet(origin, self.rotation, 0.4)
 
 	def move(self):
 		pass
@@ -84,7 +91,9 @@ class DrivablePlayer(player.Player):
 
 
 	def update(self, surface, clock, blocks, keys):
-		self.read_input(keys, clock)
+		self.totalTimer += clock.get_time()
+		for block in self.read_input(keys, clock):
+			blocks.add(block)
 
 		self.dirty = 1
 		self.slow(clock)
@@ -132,6 +141,7 @@ class DrivablePlayer(player.Player):
 
 	def read_input(self, keys, clock):
 		''' Handles user input '''
+		createdObjects = []
 		for idx, val in enumerate(keys):
 			if val:
 				currKey = pygame.key.name(idx)
@@ -145,3 +155,10 @@ class DrivablePlayer(player.Player):
 							self.left(clock)
 						if action == 'right':
 							self.right(clock)
+						if action == 'shoot':
+							bullet = self.shoot(clock, self.position)
+							if bullet is not None:
+								createdObjects.append(bullet)
+						else:
+							self.lastShot += clock.get_time()
+		return createdObjects

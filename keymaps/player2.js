@@ -2,5 +2,6 @@
 	"accelerate": "i",
 	"reverse": "k",
 	"left": "j",
-	"right": "l"
+	"right": "l",
+	"shoot": "space"
 }

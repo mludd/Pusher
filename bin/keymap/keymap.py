@@ -13,7 +13,8 @@ class Keymap:
 				'accelerate': False,
 				'reverse': False,
 				'left': False,
-				'right': False
+				'right': False,
+				'shoot': False
 			}
 		else:
 			self.actions = self.load(file)

@@ -17,6 +17,7 @@ class Bullet(pygame.sprite.DirtySprite):
 		self.sprite = pygame.sprite.RenderPlain(self)
 		self.distance = 0
 		self.type = 'projectile'
+		self.age = 0
 
 	def destruct(self, surface):
 		self.dirty = 1
@@ -26,6 +27,10 @@ class Bullet(pygame.sprite.DirtySprite):
 	def update(self, surface, clock, blocks):
 		self.dirty = 1
 		timedelta = clock.get_time()
+		self.age += timedelta
+		if self.age > 1000:
+			self.destruct(surface)
+
 		position = [
 			self.position[0] + (math.sin(math.radians(self.rotation)) * self.speed * timedelta),
 			self.position[1] + (math.cos(math.radians(self.rotation)) * self.speed * timedelta),

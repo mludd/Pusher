@@ -89,10 +89,10 @@ class Game:
                     sys.exit(0) # Quit game
                 elif event.key == K_r:
                     self.map = map.Map(basePath+'/maps/default.js')
-                elif event.key == K_SPACE:
-                    if isinstance(self.map.player, player.DrivablePlayer):
-                        origin = [
-                            self.map.player.rect.centerx,
-                            self.map.player.rect.centery
-                        ]
-                        self.map.blocks.add(self.map.player.shoot(origin))
+#                elif event.key == K_SPACE:
+#                    if isinstance(self.map.player, player.DrivablePlayer):
+#                        origin = [
+#                            self.map.player.rect.centerx,
+#                            self.map.player.rect.centery
+#                        ]
+#                        self.map.blocks.add(self.map.player.shoot(origin))
