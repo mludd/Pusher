@@ -70,7 +70,12 @@ class DrivablePlayer(player.Player):
 		
 		if self.totalTimer - self.lastShot > 500:
 			self.lastShot = self.totalTimer
-			return bullet.Bullet(origin, self.rotation, 0.4)
+			offset = self.image.get_rect().center
+			adjustedOrigin = [
+				origin[0] + offset[0] + offset[0] * math.sin(math.radians(self.rotation)),
+				origin[1] + offset[1] + offset[1] * math.cos(math.radians(self.rotation))
+			]
+			return bullet.Bullet(adjustedOrigin, self.rotation, 0.4)
 
 	def move(self):
 		pass
