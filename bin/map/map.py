@@ -4,6 +4,7 @@ import block
 import player
 import bullet
 import keymap
+import blockgroup
 import pygame
 
 class Map:
@@ -55,7 +56,7 @@ class Map:
             currentRow += 1
 
         # Load blocks
-        self.blocks = pygame.sprite.Group()
+        self.blocks = blockgroup.BlockGroup() #pygame.sprite.Group()
         blocks = data['blocks']
         for blk in blocks:
             self.blocks.add(block.Block(blk['type'], blk['position'], blk['rotation'], blk['direction'], blk['speed']))

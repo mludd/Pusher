@@ -40,6 +40,9 @@ class Game:
         menlo = pygame.font.SysFont("Menlo", 12)
         debugText = menlo.render("Player position: , Player speed: , Player rotation: ", 1, (0,0,0))
 
+        for property, value in vars(self.map.blocks).iteritems():
+            print property, ": ", value
+
         while True:
             self.clock.tick(60)
             ## Parse input
@@ -47,8 +50,10 @@ class Game:
             surface = self.surface
 
             # Blocks, projectiles et al
+
             self.map.blocks.update(self.surface, self.clock, self.map.blocks)
             self.map.blocks.clear(self.screen, self.surface)
+            self.map.blocks.remove_dead()
             self.map.blocks.draw(self.screen)
 
             # Player

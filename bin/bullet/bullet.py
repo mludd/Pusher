@@ -7,6 +7,7 @@ class Bullet(pygame.sprite.DirtySprite):
 	def __init__(self, position, rotation, speed):
 		pygame.sprite.DirtySprite.__init__(self)
 		basePath = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..'))
+		self.destroy = False
 		self.position = position
 		self.originalPosition = self.position
 		self.rotation = rotation
@@ -20,16 +21,16 @@ class Bullet(pygame.sprite.DirtySprite):
 		self.age = 0
 
 	def destruct(self, surface):
+		print "Destruction should happen now"
 		self.dirty = 1
 		self.sprite.clear(self.screen, surface)
+		self.destroy = True
 		return surface
 
 	def update(self, surface, clock, blocks):
 		self.dirty = 1
 		timedelta = clock.get_time()
 		self.age += timedelta
-		if self.age > 1000:
-			self.destruct(surface)
 
 		position = [
 			self.position[0] + (math.sin(math.radians(self.rotation)) * self.speed * timedelta),
@@ -55,6 +56,8 @@ class Bullet(pygame.sprite.DirtySprite):
 			8,
 			8
 		)
+		if self.age > 1000:
+			surface = self.destruct(surface)
 
 	def reached_limit(self):
 		if self.distance >= 300:

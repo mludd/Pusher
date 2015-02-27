@@ -8,6 +8,7 @@ class Block(pygame.sprite.DirtySprite):
         pygame.sprite.DirtySprite.__init__(self)
         basePath = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..'))
         
+        self.destroy = False
         self.position = position
         self.conf = self.load(file)
         self.image, self.rect = self.load_png(basePath+'/images/'+self.conf['image'])
