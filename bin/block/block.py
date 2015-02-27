@@ -36,6 +36,7 @@ class Block(pygame.sprite.DirtySprite):
     def destruct(self, surface):
         self.dirty = 1
         self.sprite.clear(self.screen, surface)
+        self.destroy = True
         return surface
 
     def update(self, surface, clock, blocks):

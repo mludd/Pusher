@@ -45,6 +45,7 @@ class Bullet(pygame.sprite.DirtySprite):
 			if not self.handle_collision(block, clock) or (block.type == "projectile" and block.reached_limit() != True):
 				newBlocks.add(block)
 			else:
+				surface = self.destruct(surface)
 				surface = block.destruct(surface)
 		blocks = newBlocks
 
@@ -60,7 +61,7 @@ class Bullet(pygame.sprite.DirtySprite):
 			surface = self.destruct(surface)
 
 	def reached_limit(self):
-		if self.distance >= 300:
+		if self.distance >= 150:
 			return True
 		return False
 

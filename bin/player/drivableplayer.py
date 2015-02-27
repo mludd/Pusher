@@ -66,6 +66,9 @@ class DrivablePlayer(player.Player):
 
 	def shoot(self, clock, origin):
 		td = clock.get_time()
+		self.totalTimer += td
+		print "totalTimer: ", self.totalTimer
+		print "lastShot: ", self.lastShot
 		print self.totalTimer - self.lastShot
 		
 		if self.totalTimer - self.lastShot > 500:
@@ -97,6 +100,8 @@ class DrivablePlayer(player.Player):
 
 	def update(self, surface, clock, blocks, keys):
 		self.totalTimer += clock.get_time()
+		if self.totalTimer < 0:
+			self.totalTimer = 0
 		for block in self.read_input(keys, clock):
 			blocks.add(block)
 
